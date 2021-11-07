@@ -1,4 +1,4 @@
-#from pizza_pizza import Pizza
+from pizza_pizza import Pizza
 from pizza_pizza import counter
 
 def test_counter():
@@ -9,7 +9,7 @@ def test_counter():
     actual = counter(x,y,z)
 
     assert (count == actual)
-'''
+
 def test_pizza_class_pizza():
     #e1= 5.0 c m v
     #e2= m : 5.0
@@ -19,4 +19,3 @@ def test_pizza_class_pizza():
     #assert(e3 == actual)
     
     assert (e4 == actual)
-'''
