@@ -1,3 +1,11 @@
+def counter(x,y,z):
+    x = 5
+    y = 4
+    z = 1
+    count = int(x)+int(y)+int(z)
+    print(count)
+    return count
+counter(5,4,1)
 class Pizza:
     __slots__ = ['price', 'cheese', 'meats', 'veggies']
     def __init__(self): # cheese, meats, veggies)
@@ -5,7 +13,9 @@ class Pizza:
         self.cheese = 'c' #cheese #
         self.meats = 'm' #set() #meats #
         self.veggies = 'v' #set() #veggies #
-        print(self.price, self.cheese, self.meats, self.veggies)
+        print(self.price)
+        return None
+        #print(self.price, self.cheese, self.meats, self.veggies)
         #return self.price, self.cheese, self.meats, self.veggies
 pizza = Pizza()
 print(pizza.price)
@@ -24,7 +34,8 @@ _CHEESES = {'f': Topping('f', 'Fresh Mozzeralla', 1.50), 's': Topping('s', 'Shre
 _MEATS = {'p': Topping('p', 'Pepperoni', 1.0), 's': Topping('s', 'Sausage', 0.75), 'm': Topping('m', 'Meatballs', 0.50)}
 _VEGGIES = {'m': Topping('m', 'Mushroom', 1.0), 'bp': Topping('bp','Bell Peppers', 1.0), 'jp': Topping('jp', 'Jalapeno peppers', 1.0), 'p': Topping('p', 'Pineapple', 1.50), 'n': Topping('n', 'None', 0.0)}
 #print(_CHEESES)
-#topping = Topping(_CHEESES[items])
+#topping = Topping(_CHEESES)
+#print(topping)
 def menu_plan(menu):
     if menu == 'O' or menu == 'o':
         print('Cheese Options: ')
@@ -64,11 +75,11 @@ def menu_plan(menu):
     #return op1, op2, op3, s_op1, s_op2, s_op3
 def print_pizza(pizza):
     print("One pizza with", _CHEESES[pizza.cheese].name,end = ',') #pizza.cheese
-    f_amount = ('$', round(pizza.price, 2))
-    print(f_amount, sep = '' )
+    f_amount = print('$', round(pizza.price, 2), sep = '' )
+    #print(f_amount, sep = '' )
     print("One pizza with",_CHEESES[pizza.cheese].name, _MEATS[pizza.cheese].name, _VEGGIES[pizza.cheese].name, end = ',')
-    s_amount = ('$', round(pizza.price, 2))
-    print(s_amount, sep = '')
+    s_amount = print('$', round(pizza.price, 2), sep = '' )
+    #print(s_amount, sep = '')
     t_amount = int(f_amount) + int(s_amount)
     print('Total price is ',t_amount)
 #    for meat in pizza.meats:
